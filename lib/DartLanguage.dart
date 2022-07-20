@@ -23,13 +23,11 @@ void DartLanguage(){
   //const ->Sabit değerleri içeren veri tipidir. (Değiştirilemez)
 
 
-
-
-
-
   print(mesaj);
   print("Doğum yılı : "+dogumYili.toString());
   print("Oran : "+oran.toString());
+
+
 
 
 
@@ -72,6 +70,65 @@ void DartLanguage(){
     default: {print("bilinmiyor");}
     break;
   }
+
+
+  //----Lists----
+
+  //Fixed Length List
+  /*
+  var urunler = new List(5);
+  urunler[0]="laptop";
+  urunler[1]="mouse";
+  urunler[2]="keyboard";
+  urunler[3]="monitor";
+  urunler[4]="mic";
+*/
+
+  //Growable List
+  var sehirler = ["Ankara","İstanbul","İzmir"];
+  sehirler.add("Elazığ");
+
+  //a içeren sehirler
+  print(sehirler.where((element) => element.contains("a")));
+
+  //listedeki ilk eleman
+  print(sehirler.first);
+
+  List<int> liste1 = [2, 4, 6, 10];
+
+
+
+
+  //----Loops----
+  for(var i=1;i<=10;i++){
+    print(i);
+  }
+
+  var products = ["mouse","laptop","pc"];
+  for(var i=0;i<products.length;i++){
+    print(products[i]);
+  }
+
+
+  for(var product in products ){
+    print(product);
+  }
+
+  int sayi=1;
+  while(sayi<=10){
+    print(sayi);
+    sayi++;
+  }
+
+
+
+
+
+
+
+
+
+
 
 
 

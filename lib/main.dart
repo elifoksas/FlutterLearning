@@ -28,9 +28,21 @@ class myApp extends StatelessWidget{
       body: Center(
         child: RaisedButton(
           onPressed: () {
+            int puan = 45;
+            String sonuc="";
+            if(puan>=50){
+              sonuc="gecti";
+            }
+            else if(puan>=40){
+              sonuc="bütünleme";
+            }
+            else{
+              sonuc="kaldı";
+            }
+
             var alert = AlertDialog(
               title: Text("sınav sonucu"),
-              content: Text("geçti"),
+              content: Text(sonuc),
             );
 
             showDialog(context: context, builder: (BuildContext context)=>alert);
