@@ -1,6 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:orneklerfluttter/Collections.dart';
 import 'package:orneklerfluttter/DartLanguage.dart';
+import 'package:orneklerfluttter/IfElse.dart';
+import 'package:orneklerfluttter/Loops.dart';
+import 'package:orneklerfluttter/SetMap.dart';
 
 //MaterialApp -> Scaffold -> AppBar
 //                        -> Center
@@ -10,6 +14,12 @@ void main(){
 
 
   DartLanguage();
+  Collections();
+  ifElse();
+  Loops();
+  SetMap();
+
+
   runApp(MaterialApp(
     home: myApp()
   ));

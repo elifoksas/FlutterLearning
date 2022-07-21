@@ -1,128 +1,41 @@
+import 'dart:io';
+
+
 void DartLanguage(){
 
+  //-----kullanıcıdan değer alma----
 
-  print("merhaba");
+  //readLineSync() -> kullanıcıdan girilen değeri string olarak alır.
 
-  //----Variables----
-
-  String mesaj = "selam";
-  int dogumYili = 2000;
-  double oran = 5.23;
-  bool truth = false;
-  //var ->Herhangi bir değişkenin tipini bilmediğimiz durumlarda kullanabiliriz.
-  //      Derleme sırasında program tipini kendisi otomatik olarak belirler.
-  //      Tipi belirlendikten sonra değişmez. örn: int değer string olamaz.
-
-  //dynamic ->Bir değişkenin türünün çalışma esnasında değiştiği durumda kullanılan veri tipi
-  //          Mesela başta String olarak bir değer verirken, sonradan integer bir değer verebiliriz.
-
-  //final ->Uygulama çalışma sırasında oluşan sabit tür içeren veri tipidir.
-  //        Değer kullanılmadığı sürece bellekte yer tutmaz.
-  //        Değeri değiştirmek istediğimizde; Can’t assign to the final variable hatasını alırız.
-
-  //const ->Sabit değerleri içeren veri tipidir. (Değiştirilemez)
+  print("adınızı giriniz.");
+  String? isim=stdin.readLineSync();
+  print("girilen isim: $isim");
 
 
-  print(mesaj);
-  print("Doğum yılı : "+dogumYili.toString());
-  print("Oran : "+oran.toString());
+
+  print("yaşınızı giriniz");
+  int? yas = int.parse(stdin.readLineSync()!); // ! -> burası null olmayacak bana hata verme.
+  print("girilen yas: $yas");
 
 
 
 
+//-----fat arrow-----(kısa fonk gösterimi)
 
-  //----If-Else-Switch----
+int sayilariCarp(int x,int y) => x*y;
 
-  var sistemeGirmisMi = false;
-
-  if(sistemeGirmisMi==true){
-    print("anasayfaya gidildi");
-  }
-  else{
-    print("login sayfasına gidildi");
-  }
-
-
-
-  int puan = 45;
-  if(puan>=50){
-    print("geçti");
-  }
-  else if(puan>=40){
-    print("bütünleme");
-  }
-  else{
-    print("kaldı");
-  }
-
-
-
-  String not = "A";
-  switch(not){
-    case "A": {print("süper");}
-    break;
-    case "B": {print("iyi");}
-    break;
-    case "C": {print("idare eder");}
-    break;
-    case "D": {print("kötü");}
-    break;
-    default: {print("bilinmiyor");}
-    break;
-  }
-
-
-  //----Lists----
-
-  //Fixed Length List
-  /*
-  var urunler = new List(5);
-  urunler[0]="laptop";
-  urunler[1]="mouse";
-  urunler[2]="keyboard";
-  urunler[3]="monitor";
-  urunler[4]="mic";
-*/
-
-  //Growable List
-  var sehirler = ["Ankara","İstanbul","İzmir"];
-  sehirler.add("Elazığ");
-
-  //a içeren sehirler
-  print(sehirler.where((element) => element.contains("a")));
-
-  //listedeki ilk eleman
-  print(sehirler.first);
-
-  List<int> liste1 = [2, 4, 6, 10];
+int maxOlaniBul(int a,int b) => (a < b) ? b : a ;
+//a, b'den küçükse b'yi, değilse a'yı geri döndür.
 
 
 
 
-  //----Loops----
-  for(var i=1;i<=10;i++){
-    print(i);
-  }
+//----optional parameter----
 
-  var products = ["mouse","laptop","pc"];
-  for(var i=0;i<products.length;i++){
-    print(products[i]);
-  }
-
-
-  for(var product in products ){
-    print(product);
-  }
-
-  int sayi=1;
-  while(sayi<=10){
-    print(sayi);
-    sayi++;
-  }
-
-
-
-
+int sayilariTopla(int sayi1,int sayi2,[int sayi3=0]){
+  //kullanıcı sayi3'ü girmeyebilir. girmezse 0 olarak alınsın.
+  return sayi1+sayi2+sayi3;
+}
 
 
 
