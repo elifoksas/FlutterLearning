@@ -40,7 +40,7 @@ void Collections(){
   List<int> sayilar5=[];
 
 
-  //listelerle ilgili metodlar:
+  //----listelerle ilgili metodlar:----
 
   if(sayilar.isNotEmpty){
     print(sayilar.first);
@@ -63,6 +63,12 @@ void Collections(){
   print(sayilar.elementAt(2));//2. indexteki elemanı verir.
   print(sayilar.indexOf(1));//1'in indexini verir.
   sayilar.shuffle();//elemanları karıştırır.
+
+
+  //iki listeyi birleştirmek
+  var sonListe=[...sayilar5, ...sayilar2];
+
+
 
 
 
