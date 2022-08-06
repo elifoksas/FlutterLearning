@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:orneklerfluttter/Collections.dart';
-import 'package:orneklerfluttter/DartLanguage.dart';
-import 'package:orneklerfluttter/IfElse.dart';
-import 'package:orneklerfluttter/Loops.dart';
-import 'package:orneklerfluttter/SetMap.dart';
+import 'package:orneklerfluttter/basics/Collections.dart';
+import 'package:orneklerfluttter/basics/dart_language.dart';
+import 'package:orneklerfluttter/basics/if_else.dart';
+import 'package:orneklerfluttter/basics/loops.dart';
+import 'package:orneklerfluttter/basics/set_map.dart';
 
 //MaterialApp -> Scaffold -> AppBar
 //                        -> Center
